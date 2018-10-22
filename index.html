@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div id="document">
+        <canvas id="myCanvas" width="300" height="200"></canvas>
+
+        <textarea rows="20" cols="50" id="vertexShader">
+void main(){
+    vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
+    gl_Position = projectionMatrix * modelViewPosition;
+}
+        </textarea>
+        <textarea rows="20" cols="50" id="fragmentShader">
+void main(){
+    gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);
+}
+        </textarea>
+        <button id="updateshaderbtn">Update Shader</button>
+    </div>
+    <div>
+        <input hidden type="file" id="txtfiletoread" />
+    </div>
+    <script type="text/javascript" src="dat.gui.min.js"></script>
+    <script src="./three.js-master/build/three.min.js"></script>
+    <script src="./three.js-master/examples/js/loaders/OBJLoader.js"></script>
+    <script src="./three.js-master/examples/js/controls/DragControls.js"></script>
+    <script src="./three.js-master/examples/js/controls/TrackballControls.js"></script>
+    <script src="js/BsplineCurve.js"></script>
+    <script src="js/LinearCurve.js"></script>
+    <script src="js/World.js"></script>
+    <script src="js/Train.js"></script>
+    <script src="js/ControlPoint.js"></script>
+    <script src="js/helper_functions.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
