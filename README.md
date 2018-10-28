@@ -16,6 +16,8 @@ The project extensively utilizes three.js as its javascript graphics library and
 
 The js folder contains code written by Wei-Ting Chen 2018.
 
+## Additional information
+
 A list of tutorials/readings that assisted me during the project:
 
 Official Three.js https://threejs.org/docs/
