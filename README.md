@@ -15,7 +15,11 @@ The project extensively utilizes three.js as its javascript graphics library and
 The js folder contains code written by Wei-Ting Chen 2018.
 
 A list of tutorials/readings that assisted me during the project:
+
 Official Three.js https://threejs.org/docs/
+
 CJ Gammon Youtube videos - A quick walkthrough of the main features: https://www.youtube.com/user/cjgammon/videos
+
 Three.js Examples - very helpful to implement similar functionalities: https://threejs.org/examples/
+
 Miscellaneous Tutorials: https://www.learnthreejs.com/
