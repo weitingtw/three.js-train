@@ -9,25 +9,8 @@
 </head>
 
 <body>
-    <div id="document">
-        <canvas id="myCanvas" width="300" height="200"></canvas>
-
-        <textarea rows="20" cols="50" id="vertexShader">
-void main(){
-    vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
-    gl_Position = projectionMatrix * modelViewPosition;
-}
-        </textarea>
-        <textarea rows="20" cols="50" id="fragmentShader">
-void main(){
-    gl_FragColor = vec4(0.0, 1.0, 0.0, 1.0);
-}
-        </textarea>
-        <button id="updateshaderbtn">Update Shader</button>
-    </div>
-    <div>
-        <input hidden type="file" id="txtfiletoread" />
-    </div>
+    <canvas id="myCanvas" width="300" height="200"></canvas>
+    <input hidden type="file" id="txtfiletoread" />
     <script type="text/javascript" src="dat.gui.min.js"></script>
     <script src="./three.js-master/build/three.min.js"></script>
     <script src="./three.js-master/examples/js/loaders/OBJLoader.js"></script>
