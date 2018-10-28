@@ -2,6 +2,8 @@
 
 open index.html in a browser.
 
+Github Pages: https://uwgraphics.github.io/Wei-Tings-Train/
+
 ## Notes:
 
 1. Click on realTime to enable most options.
