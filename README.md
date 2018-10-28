@@ -1,6 +1,8 @@
-Usage: open index.html in a browser.
+## Usage:
 
-Notes:
+open index.html in a browser.
+
+## Notes:
 
 1. Click on realTime to enable most options.
 2. Use keys QWER to manipute the orientation of a selected control point.
