@@ -16,16 +16,12 @@ class World {
     });
     this.renderer.setClearColor(0xfff1ff);
     this.renderer.setPixelRatio(window.devicePixelRatio);
-    this.renderer.setSize(
-      document.getElementById(canvasId).width,
-      document.getElementById(canvasId).height
-    );
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.shadowMap.enabled = true;
     this.renderer.shadowMap.type = THREE.BasicShadowMap;
     this.camera = new THREE.PerspectiveCamera(
       50,
-      document.getElementById(canvasId).width /
-        document.getElementById(canvasId).height,
+      window.innerWidth / window.innerHeight,
       0.01,
       3000
     );
@@ -41,9 +37,13 @@ class World {
     this.scene.fog = new THREE.Fog(fogColor, 0.0025, 650);
 
     // Provided trackball Controls in Three.js examples
-    this.controls = new THREE.TrackballControls(this.camera);
-    this.controls.rotateSpeed = 3.0;
-    this.controls.panSpeed = 2.0;
+    this.controls = new THREE.OrbitControls(
+      this.camera,
+      this.renderer.domElement
+    );
+    this.controls.maxPolarAngle = Math.PI * 0.45;
+    this.controls.minDistance = 1;
+    this.controls.maxDistance = 500;
 
     // the trackball controls are only enabled when the mouse is over
     document.getElementById(canvasId).onmouseover = () => {
