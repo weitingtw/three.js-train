@@ -25,16 +25,11 @@ class World {
       0.01,
       3000
     );
-    this.camera.position.x = 200;
-    this.camera.position.z = 0;
+    this.camera.position.x = 400;
+    this.camera.position.z = 400;
     this.camera.position.y = 400;
     this.camera.lookAt(new THREE.Vector3(0, 0, 0));
     this.scene = new THREE.Scene();
-
-    // add fog effect
-    var fogColor = new THREE.Color(0xffffff);
-    this.scene.background = fogColor;
-    this.scene.fog = new THREE.Fog(fogColor, 0.0025, 650);
 
     // Provided trackball Controls in Three.js examples
     this.controls = new THREE.OrbitControls(
@@ -43,7 +38,7 @@ class World {
     );
     this.controls.maxPolarAngle = Math.PI * 0.45;
     this.controls.minDistance = 1;
-    this.controls.maxDistance = 500;
+    this.controls.maxDistance = 800;
 
     // the trackball controls are only enabled when the mouse is over
     document.getElementById(canvasId).onmouseover = () => {

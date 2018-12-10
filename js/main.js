@@ -12,6 +12,11 @@ var params = {
   realTime: true,
   Run: true,
   Bspline: false,
+  addFog: function() {
+    var fogColor = new THREE.Color(0xffffff);
+    myWorld.scene.background = fogColor;
+    myWorld.scene.fog = new THREE.Fog(fogColor, 0.0025, 900);
+  },
   addPoint: function() {
     addPoint(myWorld);
   },
