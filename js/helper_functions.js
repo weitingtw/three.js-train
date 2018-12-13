@@ -63,7 +63,7 @@ function dragStartCallBack(event) {
 // function to call when control points finish dragging
 function dragEndCallBack(event) {
   myWorld.controls.enabled = true;
-  params.realTime = false;
+  //params.realTime = false;
 }
 
 // add a control point to a world
@@ -312,16 +312,17 @@ function setUpreload(world) {
 
 // manipulate orientation of the control points
 document.onkeypress = function(event) {
-  if (chosenCP != null && event.key == "q") {
+  if (chosenCP != null && (event.key == "q" || event.key == "Q")) {
+    console.log(chosenCP, "asd");
     chosenCP.orient.x += 0.15;
   }
-  if (chosenCP != null && event.key == "w") {
+  if (chosenCP != null && (event.key == "w" || event.key == "W")) {
     chosenCP.orient.x -= 0.15;
   }
-  if (chosenCP != null && event.key == "e") {
+  if (chosenCP != null && (event.key == "e" || event.key == "E")) {
     chosenCP.orient.z += 0.15;
   }
-  if (chosenCP != null && event.key == "r") {
+  if (chosenCP != null && (event.key == "r" || event.key == "R")) {
     chosenCP.orient.z -= 0.15;
   }
 };
