@@ -2,7 +2,7 @@
 
 open index.html in a browser.
 
-Github Pages: https://uwgraphics.github.io/Wei-Tings-Train/
+Github Pages: https://weitingtw.github.io/three.js-train/
 
 ## Notes:
 
