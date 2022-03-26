@@ -27,7 +27,6 @@ class Train {
     var textureLoader = new THREE.TextureLoader();
     textureLoader.setCrossOrigin("");
     var trainTexture = new textureLoader.load("images/metal.png");
-    console.log(trainTexture);
 
     this.material = new THREE.MeshPhongMaterial({
       color: 0xf0ff0f,

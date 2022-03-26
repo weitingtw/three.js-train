@@ -246,7 +246,7 @@ function setupUI() {
     .listen()
     .onFinishChange();
   //set realTime and B spline to false when initialized
-  params["realTime"] = false;
+  //params["realTime"] = false;
   params["Bspline"] = false;
   f2.add(params, "addFog").name("add fog effect");
   f2.add(params, "addPoint").name("add a Point");

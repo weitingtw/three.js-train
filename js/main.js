@@ -38,11 +38,9 @@ var params = {
 var planeGeometry = new THREE.PlaneGeometry(500, 500, 100, 100);
 var loader = new THREE.TextureLoader();
 loader.setCrossOrigin("anonymous");
-var texture = loader.load("images/city.jpg");
+
 var material = new THREE.MeshPhongMaterial({
-  map: texture,
-  side: THREE.DoubleSide,
-  wireframe: false
+  color: 0xACA197
 });
 var plane = new THREE.Mesh(planeGeometry, material);
 plane.receiveShadow = true;
@@ -78,15 +76,6 @@ var cur_curves = [];
 var rails = [];
 // the normals for each point on each curve, depending on number of curve segments
 var normals = [];
-
-// import model
-var objLoader = new THREE.OBJLoader();
-objLoader.load("objects/building.obj", function(object) {
-  object.position.x = 60;
-  object.position.z = 50;
-  object.color = 0xffdf00;
-  myWorld.addObject(object);
-});
 
 // light
 var spotlight = new THREE.SpotLight(0xffffff, 1.3, 1500);

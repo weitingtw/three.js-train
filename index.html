@@ -7,6 +7,30 @@
   </head>
 
   <body>
+    <div
+      style="
+        font-family: 'Schoolbell', arial, serif;
+        font-weight: bold;
+        position: absolute;
+        width: 300px;
+        z-index: 1;
+      "
+    >
+      Click on realTime to enable most options. <br /><br />
+      Use keys QWER to manipute the orientation of a selected control point.
+      <br /><br />For loading point files, each point should consist of 6
+      numbers, splitted by space, that represent the position and the
+      orientation. A minimum of four points are required.
+      <div>
+        e.g. <br />120 10 120 0 1 0 <br />120 20 -120 0 1 0 <br />-120 30 120 0
+        1 0 <br />
+        -120 40 -120 0 1 0 <br />
+        120 50 120 0 1 0 <br />
+        120 60 -120 0 1 0 <br />
+        -120 70 120 0 1 0 <br />
+        -120 80 -120 0 1 0
+      </div>
+    </div>
     <canvas id="myCanvas" width="300" height="200"></canvas>
     <input hidden type="file" id="txtfiletoread" />
     <script type="text/javascript" src="dat.gui.min.js"></script>
